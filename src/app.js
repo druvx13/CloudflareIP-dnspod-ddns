@@ -11,12 +11,12 @@ app.use(async ctx => {
   }
 });
 
-// 每隔15分钟更新Cloudflare优选IP
+// Update the selected Cloudflare IP every 15 minutes.
 schedule.scheduleJob("*/15 * * * *", updateCloudflareIp);
-console.log("\x1b[93m%s\x1b[0m", "15分钟自动更新已开启");
+console.log("\x1b[93m%s\x1b[0m", "Automatic 15-minute updates enabled.");
 
-// 初始化
+// Start the server.
 const PORT = 52100;
 app.listen(PORT, () => {
-  console.log("\x1b[92m%s\x1b[0m", `Server is running：http://localhost:${PORT}`);
+  console.log("\x1b[92m%s\x1b[0m", `Server is running: http://localhost:${PORT}`);
 });

@@ -1,8 +1,9 @@
 module.exports = {
-  // DDNSPOD的secretId和secretKey 获取地址: https://console.dnspod.cn/account/token/apikey
+  // Get the DNSPod secretId and secretKey at:
+  // https://console.dnspod.cn/account/token/apikey
   secretId: "",
   secretKey: "",
-  // 主域名和需要DDNS的子域名
+  // Root domain and subdomain to update with DDNS.
   Domain: "vvhan.com",
   SubDomain: "cf.cname"
 };
